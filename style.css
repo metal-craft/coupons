@@ -37,6 +37,9 @@ Follow me on Codepen
     width: 80px;
     border-radius: 8px;
     margin-bottom: 20px;
+    -webkit-box-shadow: 0px 6px 18px 9px     rgba(0, 0, 0, 0.21); 
+-moz-box-shadow: 0px 6px 18px 9px rgba(0, 0, 0, 0.21); 
+box-shadow: 0px 6px 18px 9px rgba(0, 0, 0, 0.21);
 
 }
 .coupon-card h3{
