@@ -20,12 +20,13 @@ Follow me on Codepen
 
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 10s ease infinite;
 	height: 100vh;
 
 }
 .coupon-card{
     background: linear-gradient(135deg, #2580b3, #e6a1a6);
+    background-size: 100% 100%;
     color: #fff;
     text-align: center;
     padding: 40px 80px;
@@ -38,8 +39,8 @@ Follow me on Codepen
     border-radius: 8px;
     margin-bottom: 20px;
     -webkit-box-shadow: 0px 6px 18px 9px     rgba(0, 0, 0, 0.21); 
--moz-box-shadow: 0px 6px 18px 9px rgba(0, 0, 0, 0.21); 
-box-shadow: 0px 6px 18px 9px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 6px 18px 9px rgba(0, 0, 0, 0.21); 
+    box-shadow: 0px 6px 18px 9px rgba(0, 0, 0, 0.21);
 
 }
 .coupon-card h3{
