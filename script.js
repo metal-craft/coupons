@@ -1,47 +1,27 @@
-(function (window, document, undefined) {
-    window.onload = init;
+(function(window, document, undefined) {
 
-    function init() {
-        const slider = document.querySelector('.slider');
-        const sliderImages = document.querySelectorAll('.slider_img');
-        const sliderLine = document.querySelector('.slider_line');
-        const sliderBtnNext = document.querySelector('.slider_btn-next');
-        const sliderBtnPrev = document.querySelector('.slider_btn-prev');
+  // code that should be taken care of right away
 
-        let sliderCount = 0;
-        let sliderWidht = slider.offsetWidth;
-        let sliderMaxImages = sliderImages.length;
+  window.onload = init;
 
-        sliderBtnNext.addEventListener('click', nextSlide);
-        sliderBtnPrev.addEventListener('click', prevSlide);
-
-        function nextSlide() {
-            if (sliderCount < sliderMaxImages-1) {
-                sliderCount++;
-            } else {
-                sliderCount = 0;
+  function init(){
+ var cpnBtn = document.querySelector("#cpnBtn");
+            var cpnCode = document.getElementById("cpnCode");
+            cpnBtn.onclick = function(){
+                navigator.clipboard.writeText(cpnCode.innerHTML);
+                cpnBtn.innerHTML ="Скопировано";
+                setTimeout(function(){
+                    cpnBtn.innerHTML="Скопировать";
+                }, 3000);
             }
-            console.log(sliderCount);
-            rollSlider();
-        }
 
-        function prevSlide() {
-            if (sliderCount > 0) {
-                sliderCount--;
-            } else {
-                sliderCount = sliderMaxImages-1;
-            } 
-            console.log(sliderCount);
-            rollSlider();
-        }
 
-        function rollSlider() {
-            sliderLine.style.transform = `translateX(${-sliderCount * sliderWidht}px)`;
-        }
-        
-        setInterval( () =>{
-            nextSlide()
-        }, 3000);
-    }
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const coupons = urlParams.get('coupon');
+cpnCode.textContent = coupons;
+
+  }
 
 })(window, document, undefined);
